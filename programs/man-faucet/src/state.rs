@@ -13,6 +13,6 @@ pub struct Config {
 #[derive(InitSpace)]
 pub struct UserClaim {
     pub window_start: i64,
-    pub count: u8,
+    pub claimed: u64, // claw minted to this user in the current window
     pub bump: u8,
 }

@@ -18,4 +18,12 @@ pub mod man_faucet {
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
         initialize::initialize(ctx)
     }
+
+    pub fn claims(ctx: Context<Claims>, multiplier: u8) -> Result<()> {
+        claims::claims(ctx, multiplier)
+    }
+
+    pub fn admin_mint(ctx: Context<AdminMint>, amount: u64) -> Result<()> {
+        admin_mint::admin_mint(ctx, amount)
+    }
 }
